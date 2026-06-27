@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arizsanta FM Estéreo</title>
+    <title>Arizsanta FM</title>
 </head>
-<body style="margin: 0; padding: 0; background-color: #000; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; color: #fff; font-family: sans-serif;">
-
-    <h1>ARIZSANTA FM ESTÉREO</h1>
-    <p>Sonando en vivo...</p>
-
-    <!-- Este es el reproductor compatible -->
-    <audio controls autoplay style="width: 80%; margin-top: 20px;">
-        <source src="https://radio35.virtualtronics.com:20037/;stream.mp3" type="audio/mpeg">
-        Tu navegador no soporta el reproductor.
+<body style="background:#000; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; margin:0;">
+    
+    <h2 style="color:#fff; font-family:sans-serif;">ARIZSANTA FM ESTÉREO</h2>
+    
+    <audio id="miAudio" controls style="width: 80%;">
+        <source src="https://radio35.virtualtronics.com:20037/stream" type="audio/mpeg">
     </audio>
 
     <script>
-        // Forzar reproducción al tocar cualquier parte de la pantalla
-        document.body.addEventListener('click', function() {
-            document.getElementById('player').play();
-        });
+        // Esto obliga a intentar reproducir apenas carga la página
+        var audio = document.getElementById("miAudio");
+        window.onload = function() {
+            audio.play().catch(function() {
+                console.log("El navegador bloqueó el autoplay, esperando interacción.");
+            });
+        };
     </script>
 </body>
 </html>

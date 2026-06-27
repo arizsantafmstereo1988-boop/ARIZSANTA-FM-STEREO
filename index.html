@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arizsanta FM</title>
+    <style>
+        body { 
+            background: #f4f4f4; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            font-family: Arial, sans-serif;
+        }
+        .reproductor { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 15px; 
+            border: 2px solid #33cc33;
+            text-align: center; 
+            width: 90%; 
+            max-width: 300px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body style="background: #33cc33; color: white; text-align: center; font-family: Arial; padding: 50px;">
-    <h1>ARIZSANTA FM ESTÉREO</h1>
-    <p>Marcando Siempre la Diferencia</p>
-    <audio controls autoplay style="width: 100%; max-width: 300px;">
-        <source src="https://radio35.virtualtronics.com:20037/stream" type="audio/mpeg">
-    </audio>
+<body>
+    <div class="reproductor">
+        <h3>ARIZSANTA FM</h3>
+        <audio controls autoplay style="width: 100%;">
+            <source src="https://radio35.virtualtronics.com:20037/stream" type="audio/mpeg">
+        </audio>
+    </div>
 </body>
 </html>

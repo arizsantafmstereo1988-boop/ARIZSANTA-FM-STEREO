@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -17,12 +18,5 @@
     <audio id="player" controls>
         <source src="https://radio35.virtualtronics.com:20037/stream" type="audio/mpeg">
     </audio>
-
-    <script>
-        // Esto ayuda a que el navegador móvil reconozca el audio mejor
-        document.getElementById('player').play().catch(function() {
-            console.log("Esperando interacción del usuario...");
-        });
-    </script>
 </body>
 </html>

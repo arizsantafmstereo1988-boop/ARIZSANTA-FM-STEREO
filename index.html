@@ -1,22 +1,17 @@
 
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ARIZSANTA FM</title>
-    <style>
-        body { margin: 0; background: #000; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; }
-        .logo { font-size: 24px; font-weight: bold; color: #e67e22; margin-bottom: 20px; }
-        audio { width: 90%; max-width: 300px; border-radius: 50px; }
-    </style>
 </head>
-<body>
-    <div class="logo">ARIZSANTA FM ESTÉREO</div>
-    <p>Haz clic en el botón para iniciar:</p>
+<body style="background:#000; color:#fff; display:flex; justify-content:center; align-items:center; height:100vh; font-family:sans-serif;">
     
-    <audio id="player" controls>
-        <source src="https://radio35.virtualtronics.com:20037/stream" type="audio/mpeg">
-    </audio>
+    <div style="text-align:center;">
+        <h3>ARIZSANTA FM ESTÉREO</h3>
+        <audio controls autoplay>
+            <source src="https://radio35.virtualtronics.com:20037/stream" type="audio/mpeg">
+        </audio>
+    </div>
+
 </body>
 </html>

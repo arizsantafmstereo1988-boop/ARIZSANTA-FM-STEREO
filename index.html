@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arizsanta FM</title>
+    <title>ARIZSANTA FM</title>
+    <style>
+        body { margin: 0; background: #000; color: #fff; font-family: sans-serif; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; text-align: center; }
+        .logo { font-size: 24px; font-weight: bold; color: #e67e22; margin-bottom: 20px; }
+        audio { width: 90%; max-width: 300px; border-radius: 50px; }
+    </style>
 </head>
-<body style="background:#000; display:flex; flex-direction:column; align-items:center; justify-content:center; height:100vh; margin:0;">
+<body>
+    <div class="logo">ARIZSANTA FM ESTÉREO</div>
+    <p>Haz clic en el botón para iniciar:</p>
     
-    <h2 style="color:#fff; font-family:sans-serif;">ARIZSANTA FM ESTÉREO</h2>
-    
-    <audio id="miAudio" controls style="width: 80%;">
+    <audio id="player" controls>
         <source src="https://radio35.virtualtronics.com:20037/stream" type="audio/mpeg">
     </audio>
 
     <script>
-        // Esto obliga a intentar reproducir apenas carga la página
-        var audio = document.getElementById("miAudio");
-        window.onload = function() {
-            audio.play().catch(function() {
-                console.log("El navegador bloqueó el autoplay, esperando interacción.");
-            });
-        };
+        // Esto ayuda a que el navegador móvil reconozca el audio mejor
+        document.getElementById('player').play().catch(function() {
+            console.log("Esperando interacción del usuario...");
+        });
     </script>
 </body>
 </html>

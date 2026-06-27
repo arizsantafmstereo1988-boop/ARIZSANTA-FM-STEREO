@@ -1,36 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arizsanta FM</title>
-    <style>
-        body { 
-            background: #f4f4f4; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            height: 100vh; 
-            margin: 0; 
-            font-family: Arial, sans-serif;
-        }
-        .reproductor { 
-            background: white; 
-            padding: 20px; 
-            border-radius: 15px; 
-            border: 2px solid #33cc33;
-            text-align: center; 
-            width: 90%; 
-            max-width: 300px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-    </style>
+    <title>Arizsanta FM Reproductor</title>
 </head>
-<body>
-    <div class="reproductor">
-        <h3>ARIZSANTA FM</h3>
-        <audio controls autoplay style="width: 100%;">
-            <source src="https://radio35.virtualtronics.com:20037/stream" type="audio/mpeg">
-        </audio>
-    </div>
+<body style="margin:0; padding:0; background:#000; display:flex; justify-content:center; align-items:center; height:100vh;">
+    
+    <!-- El reproductor de audio directo -->
+    <audio id="player" controls autoplay style="width: 90%;">
+        <source src="https://radio35.virtualtronics.com:20037" type="audio/mpeg">
+        Tu navegador no soporta el audio.
+    </audio>
+
 </body>
 </html>
